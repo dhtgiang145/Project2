@@ -2,6 +2,7 @@ doctype html
 html
     head
         title= `${title}`
+        link(rel="stylesheet", type="text/css", href="/css/styles.css")
     body
         header
         nav
@@ -13,5 +14,24 @@ html
                 li
                     a(href="services") Services
         main    
-            h1 Place holder for services request form
+            h2 Place holder for services request form
+            section
+                form(class="form-registration")
+                    label(for="name") Name:
+                    input(type="text" id="name" name="name"  class="form-control")
+                    label(for="email") Email:
+                    input(type="email" id="email" name="email" class="form-control")
+                    label(for="phone") Phone:
+                    input(type="tel" id="phone" name= "phone" class="form-control")
+                    label(for="servicerequest") Service Request:
+                    input(type="text" id="services" name="services" class="form-control")
+                    label(for="requestdate") Prefer Date: 
+                    input(type="date" id="requestdate" name ="requestdate")
+                    label(for="additional") Comments:
+                    textarea(id="comments" name="comments")
+                    label(for="password") Create a password:
+                    br
+                    strong Your username for login is your email address
+                    input(type="text" id="password" name="password" class="form-control")
+                    input(type="submit" value="Submit" class="btn btn-primary btn-lg btn-block")
         footer &copy; Copyright 2021

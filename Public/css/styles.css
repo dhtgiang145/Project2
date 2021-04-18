@@ -1,0 +1,19 @@
+form {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+  display: inline-block;
+}
+form input {
+  width: 100%;
+  margin: 0px 0 10px;
+}
+form textarea {
+  width: 100%;
+}
+form .btn {
+  width: 30%;
+  float: right;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -20,6 +20,13 @@ const requestSchema = new mongoose.Schema({
   requestdate: {
     type: Date,
   },
+  bookingdate: {
+    type: Date,
+  },
+  comments:{
+    type: String,
+    trim: true,
+  },
   username: {
     type: String,
     trim: true,

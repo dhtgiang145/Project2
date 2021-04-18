@@ -1,0 +1,17 @@
+form {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+  display: inline-block;
+  input {
+    width: 100%;
+    margin: 0px 0 10px;
+  }
+  textarea {
+    width: 100%;
+  }
+  .btn {
+    width: 30%;
+    float: right;
+  }
+}
