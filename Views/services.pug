@@ -1,22 +1,18 @@
 doctype html
 html
-    head
-        title= `${title}`
-        link(rel="stylesheet", type="text/css", href="/css/styles.css")
+    include head        
     body
         header
-        nav
-            ul
-                li
-                    a(href="/") Profile
-                li
-                    a(href="gallery") Gallery
-                li
-                    a(href="services") Services
+        include nav
         main    
             h2 Place holder for services request form
-            section
-                form(class="form-registration")
+            -data = data || {}
+            if errors
+                ul.my-errors
+                    for error in errors
+                        li= error.msg
+            section 
+                form(action="." method="POST" class="form-registration")
                     label(for="name") Name:
                     input(type="text" id="name" name="name"  class="form-control")
                     label(for="email") Email:
@@ -25,13 +21,15 @@ html
                     input(type="tel" id="phone" name= "phone" class="form-control")
                     label(for="servicerequest") Service Request:
                     input(type="text" id="services" name="services" class="form-control")
-                    label(for="requestdate") Prefer Date: 
-                    input(type="date" id="requestdate" name ="requestdate")
+                    label(for="requestdate" id="requestdate") Request Date: 
+                    input(type="date" id="requestdate" name ="requestdate" class="form-control")
                     label(for="additional") Comments:
-                    textarea(id="comments" name="comments")
+                    textarea(id="comments" name="comments" class="form-control")
                     label(for="password") Create a password:
-                    br
                     strong Your username for login is your email address
                     input(type="text" id="password" name="password" class="form-control")
-                    input(type="submit" value="Submit" class="btn btn-primary btn-lg btn-block")
+                    small Password should contain at least 8 characters, one lowercase letter, one uppercase letter, one number, and one special character
+                    input(type="submit" value="Submit" class="btn btn-primary btn-lg")
+                    mark Already submit a request? 
+                        a(href="login") Login
         footer &copy; Copyright 2021

@@ -1,0 +1,18 @@
+//- already a user form
+doctype html
+html
+    include head
+    body
+        header
+        include nav                    
+        main
+            h1 User Space
+            section
+                form(action="/login" method="POST" class="form-registration")
+                    label(for="username") Username:
+                    input(type="text" id="username" name= "username" class="form-control")
+                    label(for="username") Password:
+                    input(type="text" id="password" name="password" class="form-control")
+                    input(type="submit" value="Submit" class="btn btn-primary btn-lg")
+                    label(id="error-message")
+    script(src="client")             

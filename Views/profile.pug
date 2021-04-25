@@ -1,17 +1,21 @@
 doctype html
 html
-    head
-        title= `${title}`
+    include head   
     body
         header
-        nav
-            ul
-                li
-                    a(href="/") Profile
-                li
-                    a(href="gallery") Gallery
-                li
-                    a(href="services") Services
+        include nav
         main
-            h1 This is the author's profile
+            .container
+                .row 
+                    #biopic.col-5
+                        img.dzinkpic(src="/images/bio1.jpg" alt="DZink Bio")
+                    .bio.col-5.offset-2
+                        section
+                            h4 Hello friends!
+                            p I'm Dat. Love wandering around and taking pictures of random people and stuffs.
+                            p Capturing beautiful moments is my daily joy
+                            p -Dat Dzink
+                        section
+                            h4 My experience  
+                            p Specialize in sport events (or any large gathering events), models, and portraits
         footer &copy; Copyright 2021

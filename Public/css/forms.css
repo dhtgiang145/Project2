@@ -1,19 +1,17 @@
-form {
-  max-width: 330px;
-  padding: 15px;
-  margin: 0 auto;
+.form-registration {
+  width: 40%;
   display: inline-block;
 }
-form input {
-  width: 100%;
-  margin: 0px 0 10px;
+.form-registration label {
+  display: block;
 }
-form textarea {
-  width: 100%;
-}
-form .btn {
-  width: 30%;
+.form-registration .btn {
   float: right;
+  margin: 0.5em 0;
+}
+
+mark {
+  display: inline-block;
 }
 
 /*# sourceMappingURL=forms.css.map */

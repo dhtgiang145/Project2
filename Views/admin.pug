@@ -1,6 +1,35 @@
 doctype html
 html
-    head
-        title= `${title}`
+    include head
     body
-        h1 Admin page where author can check the request received
+        header
+        include nav                     
+        main
+            h3 List of requests up-to-date
+            if requestlist.length
+                table.listing-table.table-dark.table-striped
+                    tr
+                        th Name
+                        th Email
+                        th Phone
+                        th Service Request
+                        th Request Date
+                        th Booking Date
+                        th Comments
+                        th Username
+                        th Password
+                    each request in requestlist
+                        tr
+                            td=request.name
+                            td=request.email
+                            td=request.phone
+                            td=request.service
+                            td=request.requestdate
+                            td=request.bookingdate
+                            td=request.comments
+                            td=request.username
+                            td=request.password
+            else
+                p No service request yet
+        footer &copy; Copyright 2021
+        include body

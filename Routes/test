@@ -1,0 +1,64 @@
+#DF4141
+Black
+
+router.post(
+  "/services",
+  [
+    check("name").isLength({ min: 1 }).withMessage("Please enter a name"),
+    check("email").isEmail().withMessage("Please enter an email"),
+    check("phone")
+      .isLength({ min: 10 })
+      .withMessage("Please enter a 10-digit phone number"),
+    check("password")
+      .isLength({ min: 8 })
+      .matches(/\d/)
+      .matches(/[a-zA-Z0-9]/)
+      .matches(/\+\-\*\/\~\!\@\#\$\%\^\&\(\)\_\=/)
+      .withMessage(
+        "Password should contain at least 8 characters, one lowercase letter, one uppercase letter, one number and one special character"
+      ),
+  ],
+  (req, res) => {
+    const errors = validationResult(req);
+    if (errors.isEmpty()) {
+      const request = new requests({
+        name: req.body.name,
+        email: req.body.email,
+        phone: req.body.phone,
+        service: req.body.service,
+        requestdate: req.body.requestdate,
+        bookingdate: req.requestdate,
+        comments: req.body.comments,
+        username: req.body.email,
+        password: req.body.password,
+      });
+      request
+        .save()
+        .then(() => {
+          res.render("thankyou", { title: "Thank You Page" });
+        })
+        .catch((err) => {
+          console.log(err);
+          res.send("Sorry! Something went wrong");
+        });
+    } else {
+      res.render("services", {
+        title: "Services Request",
+        errors: errors.array(),
+        data: req.body,
+      });
+    }
+  }
+);
+
+router.post("/", (req, res) => {
+  const request = new requests(req.body);
+  request
+    .save()
+    .then((item) => {
+      res.send("item saved to database");
+    })
+    .catch((err) => {
+      res.status(400).send("unable to save to database");
+    });
+});
