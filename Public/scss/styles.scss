@@ -7,26 +7,18 @@ html {
   .background {
     background-image: url("/images/background.JPG");
     height: 100%;
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     opacity: 0.9;
   }
-  .navbar {
-    width: 100%;
-    justify-content: center;
-    background-color: $navbg;
-    .nav-link {
-      color: $bodytext;
-      font-weight: bold;
-      font-size: 1.2em;
-    }
-  }
   main {
     position: absolute;
     top: 20%;
     width: 100%;
+    justify-content: center;
   }
   footer {
     position: absolute;
@@ -35,6 +27,27 @@ html {
     text-align: center;
     width: 100%;
     height: 5em;
+  }
+}
+.navbar {
+  width: 100%;
+  background-color: $navbg;
+  .navbar-brand img {
+    width: 5em;
+    height: 5em;
+  }
+  .nav-link {
+    color: $bodytext;
+    font-weight: bold;
+    font-size: 1.2em;
+    &:hover {
+      color: $body2;
+    }
+  }
+}
+.active {
+  .nav-link {
+    color: $body1;
   }
 }
 
@@ -75,4 +88,23 @@ td {
   text-align: center;
   padding: 10px;
   border-bottom: 1px solid #666;
+}
+.containter {
+  width: 100%;
+  height: auto;
+}
+
+#portrait,
+#wedding,
+#daily ul {
+  list-style-type: none;
+  li {
+    display: inline-block;
+    text-align: center;
+    img {
+      width: 10em;
+      height: 15em;
+      object-fit: cover;
+    }
+  }
 }

@@ -2,14 +2,17 @@ div.background
 nav.navbar.fixed-top.navbar-expand-lg
     div.navbar-brand
         img(src="/images/DZink128.png" alt="DZink")
-    ul.navbar-nav
-        li.nav-item
-            a.nav-link(href="/") Profile
-        li.nav-item
-            a.nav-link(href="gallery") Gallery
-        li.nav-item
-            a.nav-link(href="services") Services
-        li.nav-item
-            a.nav-link(href="status") Status
-        li.nav-item
-            a.nav-link(href="admin") Admin
+    button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation")
+        span.navbar-toggler-icon
+    div#navmenu.collapse.navbar-collapse
+        ul.navbar-nav
+            li.nav-item.active
+                a.nav-link(href="/") Profile
+            li.nav-item
+                a.nav-link(href="gallery") Gallery
+            li.nav-item
+                a.nav-link(href="services") Services
+            li.nav-item
+                a.nav-link(href="status") Status
+            li.nav-item
+                a.nav-link(href="admin") Admin
