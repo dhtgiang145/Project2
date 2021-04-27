@@ -1,5 +1,9 @@
+#formholder {
+  padding: 0.5em 1em;
+}
+
 .form-registration {
-  width: 40%;
+  width: 80%;
   display: inline-block;
 }
 .form-registration label {
@@ -8,6 +12,10 @@
 .form-registration .btn {
   float: right;
   margin: 0.5em 0;
+}
+
+#userlogin {
+  width: 30%;
 }
 
 mark {

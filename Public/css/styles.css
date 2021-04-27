@@ -1,5 +1,9 @@
+#formholder {
+  padding: 0.5em 1em;
+}
+
 .form-registration {
-  width: 40%;
+  width: 80%;
   display: inline-block;
 }
 .form-registration label {
@@ -8,6 +12,10 @@
 .form-registration .btn {
   float: right;
   margin: 0.5em 0;
+}
+
+#userlogin {
+  width: 30%;
 }
 
 mark {
@@ -23,7 +31,6 @@ body .background,
 html .background {
   background-image: url("/images/background.JPG");
   height: 100%;
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -64,15 +71,11 @@ html footer {
   color: rgba(23, 97, 176, 0.8);
 }
 
-.active .nav-link {
-  color: rgba(13, 53, 128, 0.9);
-}
-
 #biopic {
   padding: 0;
 }
 
-.dzinkpic {
+.dzinkpic, #bio2 {
   width: 100%;
   height: 75%;
   object-fit: cover;
@@ -86,7 +89,7 @@ html footer {
 
 .listing-table {
   width: 80%;
-  margin-left: 10em;
+  margin-left: 5em;
   border: 1px solid;
 }
 .listing-table th {
@@ -115,21 +118,47 @@ td {
 
 #portrait,
 #wedding,
+#daily {
+  padding-left: 10em;
+}
+#portrait ul,
+#wedding ul,
 #daily ul {
   list-style-type: none;
 }
-#portrait li,
-#wedding li,
+#portrait ul li,
+#wedding ul li,
 #daily ul li {
   display: inline-block;
   text-align: center;
 }
-#portrait li img,
-#wedding li img,
+#portrait ul li img,
+#wedding ul li img,
 #daily ul li img {
   width: 10em;
-  height: 15em;
+  height: 10em;
   object-fit: cover;
+  margin: 0.2em;
+}
+
+#contentholder {
+  width: 80%;
+  position: absolute;
+  left: 10%;
+  background-color: rgba(23, 97, 176, 0.8);
+}
+
+#scooter {
+  padding: 0.5em 1em;
+}
+
+#tableholder {
+  width: 80%;
+  position: absolute;
+  left: 10%;
+}
+#tableholder h4 {
+  margin-left: 5em;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -6,14 +6,14 @@ html
         header
         include nav                    
         main
-            h1 User Space
-            section
-                form(action="/login" method="POST" class="form-registration")
-                    label(for="username") Username:
-                    input(type="text" id="username" name= "username" class="form-control")
-                    label(for="username") Password:
-                    input(type="text" id="password" name="password" class="form-control")
-                    input(type="submit" value="Submit" class="btn btn-primary btn-lg")
-                    label(id="error-message")
-        footer &copy; Copyright 2021
-        include body           
+            div#contentholder.d-flex.justify-content-center
+                section#userlogin
+                    h4 User Space
+                    form(action="/login" method="POST" class="form-registration")
+                        label(for="username") Username:
+                        input(type="text" id="username" name= "username" class="form-control")
+                        label(for="username") Password:
+                        input(type="text" id="password" name="password" class="form-control")
+                        input(type="submit" value="Submit" class="btn btn-primary btn-lg")
+                        label(id="error-message")
+        footer &copy; Copyright 2021      
