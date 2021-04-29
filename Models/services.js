@@ -38,5 +38,5 @@ const requestSchema = new mongoose.Schema({
   },
 });
 
-requestSchema.plugin(passportLocalMongoose);
+requestSchema.plugin(passportLocalMongoose, { usernameField: "email" });
 module.exports = mongoose.model("services", requestSchema);
