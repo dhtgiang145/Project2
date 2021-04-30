@@ -67,15 +67,17 @@ html footer {
   font-weight: bold;
   font-size: 1.2em;
 }
-.navbar .nav-link:hover {
-  color: rgba(23, 97, 176, 0.8);
+
+.active a {
+  color: rgba(13, 53, 128, 0.9);
 }
 
 #biopic {
   padding: 0;
 }
 
-.dzinkpic, #bio2 {
+.dzinkpic,
+#bio2 {
   width: 100%;
   height: 75%;
   object-fit: cover;

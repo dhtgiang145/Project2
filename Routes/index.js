@@ -137,12 +137,20 @@ router.post(
   },
   // function to call once successfully authenticated
   function (req, res) {
-    res.render("yourstatus", { title: "Your Status" });
+    res.render("yourstatus", {
+      title: "Your Status",
+      email: req.body.email,
+    });
   }
 );
 
-router.get("/yourstatus", function (req, res) {
-  res.render("yourstatus", { title: "Check your status", user: req.user});
+router.get("/yourstatus", connectEnsureLogin.ensureLoggedIn(), (req, res) => {
+  res.render("yourstatus", {
+    title: "Check your status",
+    name: req.user.name,
+    email: req.user.email,
+    bookingdate: req.user.bookingdate,
+  });
 });
 
 router.get("/logout", (req, res) => {
