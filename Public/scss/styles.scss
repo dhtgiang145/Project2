@@ -39,13 +39,10 @@ html {
     color: $bodytext;
     font-weight: bold;
     font-size: 1.2em;
-    // &:hover {
-    //   color: $body2;
-    // }
+    &:hover {
+      color: $body2;
+    }
   }
-}
-.active a {
-  color: $body1;
 }
 
 #biopic {
@@ -81,6 +78,9 @@ html {
       border-right: 1px solid #666;
     }
   }
+}
+thead {
+  text-align: center;
 }
 td {
   text-align: center;

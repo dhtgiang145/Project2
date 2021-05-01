@@ -5,6 +5,29 @@ html
         header
         include nav                    
         main
-            p Hello 
-                span#userwelcome #{email}
+            div#tableholder.d-flex.flex-column
+                p Hello 
+                    span#userwelcome #{email}!
+                p Please see pricing for each type of services as below    
+                section.table-responsive
+                    table#pricetable.table-sm.table-dark.table-striped
+                        thead
+                            th(scope="col") Service Type
+                            th(scope="col") Pricing
+                        tbody    
+                            tr
+                                th(scope="row") Event
+                                td $40/hour and $2-$5 per printed picture
+                            tr   
+                                th(scope="row") Wedding
+                                td $60/hour and $2-$5 per printed picture
+                            tr    
+                                th(scope="row") Graduation
+                                td $25/hour and $2-$5 per printed picture
+                            tr    
+                                th(scope="row") Portraits
+                                td $50/hour and $2-$5 per printed picture
+                            tr
+                                th(scope="row") Photobook
+                                td Design $35/hour and $2-$5 per printed picture. Photobook printing fee varies based on materials
         footer &copy; Copyright 2021

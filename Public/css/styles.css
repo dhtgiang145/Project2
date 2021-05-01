@@ -67,9 +67,8 @@ html footer {
   font-weight: bold;
   font-size: 1.2em;
 }
-
-.active a {
-  color: rgba(13, 53, 128, 0.9);
+.navbar .nav-link:hover {
+  color: rgba(23, 97, 176, 0.8);
 }
 
 #biopic {
@@ -105,6 +104,10 @@ html footer {
 }
 .listing-table td:first-child {
   border-right: 1px solid #666;
+}
+
+thead {
+  text-align: center;
 }
 
 td {

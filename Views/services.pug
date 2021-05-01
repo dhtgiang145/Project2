@@ -18,17 +18,22 @@ html
                         input(type="text" id="name" name="name"  class="form-control")
                         label(for="email") Email:
                         input(type="email" id="email" name="email" class="form-control")
+                        strong Your username for login is your email address
                         label(for="phone") Phone:
                         input(type="tel" id="phone" name= "phone" class="form-control")
-                        label(for="servicerequest") Service Request:
-                        input(type="text" id="services" name="services" class="form-control")
+                        label(for="service") Service Request:
+                        select(class="form-select" id="service" name="service")
+                            option(value="Event") Event
+                            option(value="Wedding") Wedding
+                            option(value="Event") Graduation
+                            option(value="Portraits") Portraits
+                            option(value="Photobook") Photobook
                         label(for="requestdate" id="requestdate") Request Date: 
                         input(type="date" id="requestdate" name ="requestdate" class="form-control")
                         label(for="additional") Comments:
                         textarea(id="comments" name="comments" class="form-control")
                         label(for="password") Create a password:
-                        strong Your username for login is your email address
-                        input(type="text" id="password" name="password" class="form-control")
+                        input(type="password" id="password" name="password" class="form-control")
                         small Password should contain at least 8 characters, one lowercase letter, one uppercase letter, one number, and one special character
                         input(type="submit" value="Submit" class="btn btn-primary btn-lg")
                         mark Already submit a request? 

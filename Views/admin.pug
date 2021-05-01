@@ -18,7 +18,6 @@ html
                             th Booking Date
                             th Comments
                             th Username
-                            th Password
                         each request in requestlist
                             tr
                                 td=request.name
@@ -29,7 +28,6 @@ html
                                 td=request.bookingdate
                                 td=request.comments
                                 td=request.username
-                                td=request.password
                 else
                     p No service request yet
         footer &copy; Copyright 2021

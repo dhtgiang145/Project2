@@ -8,12 +8,12 @@ html
         main
             div#contentholder.d-flex.justify-content-center
                 section#userlogin
-                    h4 User Space
+                    h5 Please log in to view your request status and price information
                     form(action="/login" method="POST" class="form-registration")
                         label(for="email") Username:
                         input(type="text" id="email" name= "email" class="form-control")
                         label(for="password") Password:
-                        input(type="text" id="password" name="password" class="form-control")
+                        input(type="password" id="password" name="password" class="form-control")
                         input(type="submit" value="Submit" class="btn btn-primary btn-lg")
                         label(id="error-message")
-        footer &copy; Copyright 2021      
+        footer &copy; Copyright 2021
