@@ -8,7 +8,7 @@ html {
     background-image: url("/images/background.JPG");
     height: 100%;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-size: cover;
     position: relative;
     opacity: 0.9;
@@ -21,11 +21,12 @@ html {
   }
   footer {
     position: absolute;
-    top: 90%;
+    top: 100%;
     left: 0;
     text-align: center;
     width: 100%;
     height: 5em;
+    background-color: $navbg;
   }
 }
 .navbar {
@@ -51,7 +52,7 @@ html {
 .dzinkpic,
 #bio2 {
   width: 100%;
-  height: 75%;
+  height: 65%;
   object-fit: cover;
 }
 .bio {
@@ -89,20 +90,25 @@ td {
 }
 .containter {
   width: 100%;
-  height: auto;
+}
+#contentholder {
+  width: 80%;
+  position: absolute;
+  left: 10%;
+  background-color: $body2;
 }
 
 #portrait,
 #wedding,
 #daily {
-  padding-left: 10em;
+  padding-left: 5em;
   ul {
     list-style-type: none;
     li {
       display: inline-block;
       text-align: center;
       img {
-        width: 10em;
+        width: 12em;
         height: 10em;
         object-fit: cover;
         margin: 0.2em;
@@ -111,12 +117,6 @@ td {
   }
 }
 
-#contentholder {
-  width: 80%;
-  position: absolute;
-  left: 10%;
-  background-color: $body2;
-}
 
 #scooter {
   padding: 0.5em 1em;
@@ -126,6 +126,7 @@ td {
   width: 80%;
   position: absolute;
   left: 10%;
+  margin-top: 5em;
   h4 {
     margin-left: 5em;
   }

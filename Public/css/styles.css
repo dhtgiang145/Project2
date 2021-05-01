@@ -32,7 +32,7 @@ html .background {
   background-image: url("/images/background.JPG");
   height: 100%;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-size: cover;
   position: relative;
   opacity: 0.9;
@@ -47,11 +47,12 @@ html main {
 body footer,
 html footer {
   position: absolute;
-  top: 90%;
+  top: 100%;
   left: 0;
   text-align: center;
   width: 100%;
   height: 5em;
+  background-color: rgba(136, 136, 136, 0.8);
 }
 
 .navbar {
@@ -78,7 +79,7 @@ html footer {
 .dzinkpic,
 #bio2 {
   width: 100%;
-  height: 75%;
+  height: 65%;
   object-fit: cover;
 }
 
@@ -118,13 +119,19 @@ td {
 
 .containter {
   width: 100%;
-  height: auto;
+}
+
+#contentholder {
+  width: 80%;
+  position: absolute;
+  left: 10%;
+  background-color: rgba(23, 97, 176, 0.8);
 }
 
 #portrait,
 #wedding,
 #daily {
-  padding-left: 10em;
+  padding-left: 5em;
 }
 #portrait ul,
 #wedding ul,
@@ -140,17 +147,10 @@ td {
 #portrait ul li img,
 #wedding ul li img,
 #daily ul li img {
-  width: 10em;
+  width: 12em;
   height: 10em;
   object-fit: cover;
   margin: 0.2em;
-}
-
-#contentholder {
-  width: 80%;
-  position: absolute;
-  left: 10%;
-  background-color: rgba(23, 97, 176, 0.8);
 }
 
 #scooter {
@@ -161,6 +161,7 @@ td {
   width: 80%;
   position: absolute;
   left: 10%;
+  margin-top: 5em;
 }
 #tableholder h4 {
   margin-left: 5em;

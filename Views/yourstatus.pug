@@ -6,10 +6,15 @@ html
         include nav                    
         main
             div#tableholder.d-flex.flex-column
-                p Hello 
-                    span#userwelcome #{email}!
-                p Please see pricing for each type of services as below    
-                section.table-responsive
+                section.d-flex.flex-sm-row.justify-content-between
+                    div.p-2
+                        p Hello 
+                            strong#userwelcome #{email}!
+                        p Please see pricing for each type of services as below
+                    div.p-2#logout
+                        button#logout.btn.btn-light.btn-small
+                            a(href="logout") Log Out
+                section.table-responsive.d-flex.flex-sm-row.justify-content-center
                     table#pricetable.table-sm.table-dark.table-striped
                         thead
                             th(scope="col") Service Type
